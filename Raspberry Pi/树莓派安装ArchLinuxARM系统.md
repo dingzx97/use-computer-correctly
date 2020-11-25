@@ -17,5 +17,5 @@
 7. 输入`tar -zxf ArchLinuxARM-rpi-aarch64-latest.tar.gz -C /mnt`将ArchLinuxARM系统文件解压到SD卡中；
 8. 官网说树莓派4在卸载前需要输入`sed -i 's/mmcblk0/mmcblk1/g' root/etc/fstab`命令，来更新其他SD块？这里的/root/etc/fstab路径应该指代的是解压后ArchLinuxARM系统文件里的/etc/fstab，所以按我这个挂载应该输入`sed -i 's/mmcblk0/mmcblk1/g' /mnt/etc/fstab`即可；
 9. 输入`umount /mnt/boot`和`umount /mnt`卸载SD卡；
-10. 其他，解压完应该就能用了，但在卸载前可以进行一些其他工作方便使用，主要还是设置清华镜像站（`Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/$arch/$repo`）。修改/etc/pacman.d/mirrorlist文件，注释掉别的服务器，把清华的网址添加进去；
+10. 其他，解压完应该就能用了，但在卸载前可以进行一些其他工作方便使用，主要还是设置清华镜像站（`Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/$arch/$repo`）。修改/etc/pacman.d/mirrorlist（挂在的时候路径是/mnt/etc/pacman.d/mirrorlist）文件，注释掉别的服务器，把清华的网址添加进去；
 11. 开始使用，默认用户“alarm”还有“root”,账号同密码。首先输入`pacman-key --init`密钥初始化以及`pacman-key --populate archlinuxarm`添加ArchLinuxARM密钥。
