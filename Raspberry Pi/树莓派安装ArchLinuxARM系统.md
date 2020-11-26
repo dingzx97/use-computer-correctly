@@ -1,6 +1,6 @@
 # 安装ArchLnuxARM步骤（３B+、４B）
 
-1. 从网站上下载好ArchLinuxARM的系统压缩包，这里就挂个[清华镜像站](https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/os/)的，下载相应版本的系统；
+1. 从网站上下载好**ArchLinuxARM**的系统压缩包，这里就挂个[清华镜像站](https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/os/)的，下载相应版本的系统；
 2. 将SD卡插入读卡器，读卡器接电脑，用Linux系统进行分区，先输入`fdisk -l`看看有没有识别出SD卡；
 3. 输入`fdisk /dev/sd*`开始分区，`sd*`是第一步骤里看到的，大概应该是sdb，具体还得看实际是什么，下面的命令中也都需要把`sd*`修改成实际的；
 4. 输入以下命令进行分区（就懒得翻译了），按`m`可以查看帮助，跟着下面按就好：
