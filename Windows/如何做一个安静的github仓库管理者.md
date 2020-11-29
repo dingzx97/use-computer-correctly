@@ -32,6 +32,8 @@ You can initialize this repository with code from a Subversion, Mercurial, or TF
 
 `Import code`
 
-## 第二步：？？？
+## 第二步：选择一个合适的开源许可证
 
-我也不知道接下来该怎么做，慢慢摸索了。
+创建好了项目，让我们来想想用什么开源许可证把，这个[网站](https://choosealicense.com)可以帮助我们选择。
+
+我的这个项目用的是MIT许可证，毕竟是第一个项目，也只是些教程类的东西，就选择了个简单的许可证就好。
