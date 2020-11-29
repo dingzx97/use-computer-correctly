@@ -4,7 +4,7 @@
 
 2. 从[frp的GitHub](https://github.com/fatedier/frp/releases)下载电脑系统对应的文件；
 
-3. 输入命令下载:`wget https://github.com/fatedier/frp/releases/download/v0.34.3/frp_0.34.3_linux_amd64.tar.gz`（也可以自己下好在传到服务器里），之后输入`tar zxvf frp_0.34.3_linux_amd64.tar.gz`解压，输入`cd frp_0.34.3_linux_amd64`进入文件夹；
+3. 服务端输入命令下载:`wget https://github.com/fatedier/frp/releases/download/v0.34.3/frp_0.34.3_linux_amd64.tar.gz`（也可以自己下好在传到服务器里），之后输入`tar zxvf frp_0.34.3_linux_amd64.tar.gz`解压，输入`cd frp_0.34.3_linux_amd64`进入文件夹；
 
 4. 输入`nano frps.ini`编辑服务端配置文件，设置服务端绑定的端口，默认是7000（如果是在云服务器上需要开放相应的端口，frps和frpc用到的端口都需要开放），也可以再添加个token：
 
