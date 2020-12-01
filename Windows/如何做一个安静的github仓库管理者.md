@@ -14,7 +14,7 @@
 
 github官网[教程](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh)。
 
-1. 创建公钥和私钥，命令行输入`ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`，建议不要去修改密钥的保存位置，默认是放在User/用户/.ssh/目录下；
+1. 创建公钥和私钥，命令行输入`ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`，建议不要去修改密钥的保存位置，默认是放在~/.ssh/目录下；
 
    - -t 是加密算法，有 [dsa | ecdsa | ecdsa-sk | ed25519 | ed25519-sk | rsa]算法
    - -b 是密钥对长度
@@ -82,7 +82,7 @@ github官网[教程](https://docs.github.com/en/free-pro-team@latest/github/auth
 	- `origin`是仓库地址的别名，起其他的名字也是可以；
 	- `username/repo_name`是用户名和仓库名称。
 	
-3. 使用`git push`上传代码，输入`git push -u origin master:master`将本地仓库的master分支上传至远程仓库的master分支，两个分支名字相同的话可以简写成`git push -u origin master`。
+3. 使用`git push`上传代码，输入`git push -u origin master:master`将本地仓库的master分支上传至远程仓库的master分支，两个分支名字相同的话可以简写成`git push -u origin master`，如果主分支是叫main的话就把master改成main。
 
    - -u 是在远程仓库分支不存在时建立分支。
 
