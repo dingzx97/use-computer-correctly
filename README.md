@@ -12,9 +12,9 @@
   - [用户与组](https://github.com/dingzx97/use-computer-correctly/blob/main/Linux/用户与组.md)
   - [设置命令行样式及颜色](https://github.com/dingzx97/use-computer-correctly/blob/main/Linux/设置命令行样式及颜色.md)
 - Raspberry Pi
-  - [安装yay以使用AUR](https://github.com/dingzx97/use-computer-correctly/blob/main/Raspberry Pi/安装yay以使用AUR.md)
-  - [树莓派安装ArchLinuxARM系统](https://github.com/dingzx97/use-computer-correctly/blob/main/Raspberry Pi/树莓派安装ArchLinuxARM系统.md)
-  - [用树莓派做网络打印机](https://github.com/dingzx97/use-computer-correctly/blob/main/Raspberry Pi/用树莓派做网络打印机.md)
+  - [安装yay以使用AUR](https://github.com/dingzx97/use-computer-correctly/blob/main/Raspberry%20Pi/安装yay以使用AUR.md)
+  - [树莓派安装ArchLinuxARM系统](https://github.com/dingzx97/use-computer-correctly/blob/main/Raspberry%20Pi/树莓派安装ArchLinuxARM系统.md)
+  - [用树莓派做网络打印机](https://github.com/dingzx97/use-computer-correctly/blob/main/Raspberry%20Pi/用树莓派做网络打印机.md)
 
 - Windows
   - [PowerShell配色](https://github.com/dingzx97/use-computer-correctly/blob/main/Windows/PowerShell配色.md)
