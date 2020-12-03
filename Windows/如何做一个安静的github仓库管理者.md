@@ -82,11 +82,62 @@ github官网[教程](https://docs.github.com/en/free-pro-team@latest/github/auth
 	- `origin`是仓库地址的别名，起其他的名字也是可以；
 	- `username/repo_name`是用户名和仓库名称。
 	
-3. 使用`git push`上传代码，输入`git push -u origin master:master`将本地仓库的master分支上传至远程仓库的master分支，两个分支名字相同的话可以简写成`git push -u origin master`，如果主分支是叫main的话就把master改成main。
+3. 使用`git push <remote_name> <local_branch>:<remote_branch> `上传代码，输入`git push -u origin master:master`将本地仓库的master分支上传至远程仓库的master分支，两个分支名字相同的话可以简写成`git push -u origin master`，如果主分支是叫main的话就把master改成main。
 
-   - -u 是在远程仓库分支不存在时建立分支。
+   - -u 指定`origin`为默认主机，后面就可以不加任何参数使用`git push`了。
 
 ## 第七步：查看远程仓库
 
 直接去仓库看看代码有没有传上去就好。
+
+
+
+## 撤销Commit
+
+有时候，自己的强迫症换了，commit后又进行了文件内容的更改，正常来说，再进行一次commit就好了，但是这样就有两次commit了，有强迫症的我觉得明明一次commit就好，为什么搞两次，就想着弄一个commit就好，这个时候就需要用到`git reset`修改HEAD到指定的状态。
+
+1. 输入`git log`查看日志；
+
+```
+commit de16b924d2c9c8850670dc45995cb7a107c3a6ff (HEAD -> master,origin/master)
+
+    b
+
+commit 587feb29610f5a08c59cbef130c1e4df05707998
+
+    a
+```
+
+2. 假设a是以前提交的，b是刚刚提交的，现在我又进行了修改，但是不想再次提交，想着把b删了，之后把b提交时的修改和我现在修改弄成一个commit。
+3. 输入`git reset 587feb29610f5a08c59cbef130c1e4df05707998`，将HEAD移动到之前提交的a处，在输入`git log`查看日志；
+
+```
+commit 587feb29610f5a08c59cbef130c1e4df05707998 (HEAD -> master)
+
+    a
+```
+
+4. HEAD就移动到之前提交的a处，此时再进行`git add .`和`git commit -m "c"`,再输入`git log`查看日志；
+
+```
+commit 02684f204122a8fce7cbd9c8bc95c5f59ef253fa (HEAD -> master)
+
+    c
+
+commit 587feb29610f5a08c59cbef130c1e4df05707998
+
+    a
+```
+
+5. 提交的b没有了，只有一次新的提交c在了，此时就能进行`git push`了。如果在提交了b之后马上进行了push操作，现在删了b弄成一个c去push时就会出问题，会报一下错误：
+
+```
+error: failed to push some refs to <url>
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+
+6. 出现这个问题主要是因为远程仓库里面有了提交b，但是本地仓库没有这个提交，就不一致，提示需要先进行同步。但是我们并不想要b的那次提交，因此我们就需要强制提交本地的长裤，输入`git push -f origin master`，加一个`-f`就是强制更新。
 
