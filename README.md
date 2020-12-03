@@ -19,3 +19,7 @@
 - Windows
   - [PowerShell配色](https://github.com/dingzx97/use-computer-correctly/blob/main/Windows/PowerShell配色.md)
   - [如何做一个安静的github仓库管理者](https://github.com/dingzx97/use-computer-correctly/blob/main/Windows/如何做一个安静的github仓库管理者.md)
+
+- Python
+  - [生成随机密码到剪切板中](https://github.com/dingzx97/use-computer-correctly/blob/main/Python/生成随机密码到剪切板中.py)
+
