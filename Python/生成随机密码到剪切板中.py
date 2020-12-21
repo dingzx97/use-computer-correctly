@@ -15,7 +15,7 @@ def set_clipboard_text(text='hello my friend'):
     w.SetClipboardText(text)  
     w.CloseClipboard()
 
-def create_random_passwd(pass_type='1234', pass_length='16'):
+def create_random_passwd(pass_type='1234', pass_length=16):
     '''
     生成随机的密码
 
@@ -37,25 +37,22 @@ def create_random_passwd(pass_type='1234', pass_length='16'):
     symbol_list = ['!', '@', '#', '$', '%', '^', '&', '*', '.']
 
     combination = []
-    if pass_type:
-        if '1' in pass_type:
-            combination += capital_list
-        if '2' in pass_type:
-            combination += lower_list
-        if '3' in pass_type:
-            combination += num_list
-        if '4' in pass_type:
-            combination += symbol_list
-    else :
+    if '1' in pass_type:
+        combination += capital_list
+    if '2' in pass_type:
+         combination += lower_list
+    if '3' in pass_type:
+        combination += num_list
+    if '4' in pass_type:
+        combination += symbol_list
+    if not combination:
         combination += capital_list+lower_list+num_list+symbol_list
-    
-    if pass_length:
-        pass_length = eval(pass_length)
-    else:
+
+    if pass_length < 1:
         pass_length = 16
     
     password = ''
-    for _ in range(0,pass_length):
+    for _ in range(pass_length):
         password += choice(combination)
     
     return password
@@ -64,7 +61,7 @@ if __name__ == '__main__':
     print('1.大写  2.小写  3.数字  4.特殊字符')
     print('默认为\'1234\',即包含所有种类，不要数字就写\'124\',默认长度为16位')
     pass_type = input('现在想要的密码种类：')
-    pass_length = input('密码长度：')
+    pass_length = eval(input('密码长度：'))
     
     password = create_random_passwd(pass_type, pass_length)
     print('生成的密码：',password)
