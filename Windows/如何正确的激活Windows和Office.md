@@ -3,7 +3,7 @@
 ## 激活windows
 
 1. 寻找一个可用的KMS激活服务器，[这里可找到](https://www.cnblogs.com/Summer6/p/10484325.html)；
-2. 电脑设置这个服务器网址，管理员打开命令行输入`slmgr /skms <url>`；
+2. 电脑设置这个服务器网址，管理员打开命令行输入`slmgr /skms kms.dingzx97.cn`；
 3. 开始激活，输入`slmgr /ato`；
 
 
