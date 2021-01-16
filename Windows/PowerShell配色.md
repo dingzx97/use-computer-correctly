@@ -2,7 +2,7 @@
 
 打开PS的设置，到颜色页面，如下图所示：
 
-![PS属性设置面板](https://github.com/dingzx97/use-computer-correctly/blob/main/Windows/image/PowerShell配色_1.jpg)
+![PS属性设置面板](https://github.com/dingzx97/Resources/blob/master/jpg/PowerShell%E9%85%8D%E8%89%B2.jpg)
 
 首先，这16个颜色都是有用的，不是给我去选择上面那四项的。
 

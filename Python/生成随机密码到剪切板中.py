@@ -29,32 +29,29 @@ def create_random_passwd(pass_type='1234', pass_length='16'):
     return:
         str类型，返回生成的密码
     '''
-    from random import choice
-    
-    capital_list = [chr(i) for i in range(65,91)]
-    lower_list = [chr(i) for i in range(97,123)]
-    num_list = [chr(i) for i in range(48,58)]
-    symbol_list = ['!', '@', '#', '$', '%', '^', '&', '*', '.']
+    from string import ascii_lowercase, ascii_uppercase, digits, punctuation
+    from secrets import choice
 
-    combination = []
+    combination = ''
+    password = ''
+    
     if pass_type:
         if '1' in pass_type:
-            combination += capital_list
+            combination += ascii_uppercase
         if '2' in pass_type:
-            combination += lower_list
+            combination += ascii_lowercase
         if '3' in pass_type:
-            combination += num_list
+            combination += digits
         if '4' in pass_type:
-            combination += symbol_list
+            combination += punctuation
     else :
-        combination += capital_list+lower_list+num_list+symbol_list
+        combination += ascii_uppercase + ascii_lowercase + digits + punctuation
     
     if pass_length:
         pass_length = eval(pass_length)
     else:
         pass_length = 16
     
-    password = ''
     for _ in range(pass_length):
         password += choice(combination)
     
